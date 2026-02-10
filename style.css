@@ -1,0 +1,230 @@
+/*---------------------------------------------
+                GLOBAL STYLES
+---------------------------------------------*/
+
+body {
+	background: #f5f5f5;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	padding-top: 100px;
+	padding: 40px 20px; 
+	text-shadow: 0 0 10px rgba(255,0,0,0.55);
+}
+
+h1 {
+	color: #d00000;
+	font-size: 3rem;
+	animation: fadeIn 2s ease;
+}
+
+button {
+	position: relative;
+	z-index: 10;
+	background: #d00000;
+	color: white;
+	border: none;
+	padding: 12px 20px;
+	border-radius: 8px;
+	font-size: 1rem;
+	cursor: pointer;
+	box-shadow:  rgba(255,0,0,0.4);
+}
+
+button:hover {
+	background: #a00000;
+}
+
+.readable-text {
+	color #f5f5f5;
+	text-shadow: 0 0 6px rgba(255,0,0,0.4);
+
+}
+
+.glow-text {
+	color: #f5f5f5 !important;
+	text-shadow: 0 0 6px rgba(255,0,0,0.4) !important;
+}
+
+/*---------------------------------------------
+               SECTION VISIBILITY
+---------------------------------------------*/
+
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.section.visible {
+    display: block;
+    opacity: 1;
+}
+
+/*---------------------------------------------
+                 HOME PAGE
+---------------------------------------------*/
+.heart {
+	font-size: 2.5rem;
+	color: #ff1e1e;
+	animation: fadeIn2s ease;
+}
+
+.home-photo img:hover {
+	width: 250px;
+	height: auto;
+	border-radius: 12px;
+	border: 3px solid #d00000;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+	margin-top: 20px;
+	margin-bottom: 40;
+	transform: rotate(0deg) scale(1.05);
+	transition: 0.4s ease;
+
+}
+
+.bg-video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -2;
+	opacity: 0.75; /* transparancy level*/
+	pointer-events: none;
+}
+
+.video-overlay {
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.45); /*darken vid*/
+	z-index: -1;
+	pointer-events: none;
+}
+/*---------------------------------------------
+                 MESSAGE PAGE
+---------------------------------------------*/
+
+.card{
+	background: white;
+	width: 400px;
+	margin: 40px auto;
+	padding: 30px;  
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+	animation: fadeIn 1.5s ease;
+}  
+
+.message-content {
+	margin-top: 60px;
+}
+
+
+#jokeMessage {
+	display: inline-block;
+	background: rgba(255,0, 0, 0.15);
+	padding: 12px 18px;
+	border-radius: 10px;
+	margin-top: 20px;
+	font-style: italic;
+	font-size: 1rem;
+	color: #f5f5f5;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	animation: fadeIn 0.4s ease;
+}
+
+
+/* Button shake animation */
+.shake {
+	animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+	0% {transform:  translatex(0); }
+	25% {transform:  translatex(-3px); }
+	50% {transform:  translatex(3px); }
+	75% {transform:  translatex(0-3px); }
+	100% {transform:  translatex(0); }		
+}
+
+/*---------------------------------------------
+  PHOTOS PAGE - FADE-IN OF ENTIRE SECTION
+---------------------------------------------*/
+
+.photo-spiral {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.photo-spiral.show {
+	opacity: 1;
+}
+
+/*---------------------------------------------
+  PHOTOS PAGE - CARD PILE LAYOUT
+---------------------------------------------*/
+
+.spiral{
+	position: relative;
+	width: 350px;
+	height: 350px;
+	margin: 40px auto;
+}
+
+.spiral .card-photo {
+	position: absolute;
+	width: 120px;
+	top: 50%;
+	left: 50%;
+	transform-origin: center;
+	transition: transform 0.4s ease, z-index 0.2s ease;
+}
+
+.spiral .card-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 12px;
+	borde: 3px solid #d00000;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-photo.grabbed {
+	transform: translate(-50%, -50%) scale(1.6) rotate(3deg) !important;
+	z-index: 9999 !important; 
+	box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+
+
+/*---------------------------------------------
+                 ANIMATIONS
+---------------------------------------------*/
+
+@keyframes fadeInPhoto {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(5px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

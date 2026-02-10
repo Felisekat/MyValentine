@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="em">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Valentine</title>	
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- background video loop -->
+	<video class="bg-video" autoplay muted loop playsinline>
+		<source src="images/Movie.mp4" type="video/mp4">
+	</video>
+
+	<div class="video-overlay"></div>
+
+	<!-- sounds -->
+	<audio id="clickNormal" src="sounds/click.mp3"></audio>
+	<audio id="clickJoke" src="sounds/no.mp3"></audio> 
+	<audio id="clickFinal" src="sounds/yes.mp3"></audio>
+
+	<!-- Navigation-->
+	<div class="nav">
+		<button data-section="home">Home</button>
+		<button data-section="message">Message</button>
+		<button data-section="photos">Photos</button>
+	</div>
+
+	<!-- home-->
+	<div id="home" class=" section visible">
+		<div class="heart">♥</div>
+		<h1 class="glow-text">Hello, my love</h1>
+		<p class="glow-text">This is the beginning of something special... </p>
+		
+		<div class="home-photo">
+			<img src="images/Japan.jpg" alt="him" class="adjust">
+		</div>
+	</div>
+
+	<!-- Message-->
+	<div id="message" class="section">
+		<section class="message-content">
+
+			<h2 class="glow-text">There's more...</h2>
+			<p class="glow-text">I wanted to tell you something!</p>
+
+			<button id="revealBtn">Click me</button>
+
+			<div id="messageCard" class="card" style="display:none;">
+				<h2  class="readable-text">Love</h2>
+				<p  class="readable-text">I made this for you because you deserve something created with love.</p>
+			</div>
+
+			<p id="secret" style="display:none;" class="glow-text">You mean the world to me.</p>
+		
+			<!-- jokes for button -->
+			<p id="jokeMessage" style="display:none; margin-top:20px; font-style:italic;"></p>
+		</section>
+	</div>
+
+	<!-- Photos -->
+	<div id="photos" class="section">
+		<section class="photo-spiral">
+			<h2 class="glow-text">♥ Don't you just love Us ♥</h2>
+
+
+			<div class="spiral">
+				<div class="card-photo"><img src="images/dogs.jpg" alt="photo 1"></div>
+				<div class="card-photo"><img src="images/Apollo2.jpg" alt="photo 3"></div>
+				<div class="card-photo"><img src="images/Nola.JPEG" alt="photo 4"></div>
+				<div class="card-photo"><img src="images/Nola2.JPEG" alt="photo 5"></div>
+				<div class="card-photo"><img src="images/pose2.JPEG" alt="photo 6"></div>
+				<div class="card-photo"><img src="images/firstclass.JPEG" alt="photo 7"></div>
+				<div class="card-photo"><img src="images/firstclass2.JPEG" alt="photo 8"></div>
+			</div>
+		</section> 
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
