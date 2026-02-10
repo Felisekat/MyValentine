@@ -105,6 +105,11 @@ navButtons.forEach(btn => {
 		
 	const target = btn.getAttribute('data-section');
 
+	//reset message when leaving tab
+	if (target !== "message") { 
+		resetMessagePage(); 
+	}
+
 	allSections.forEach(sec => sec.classList.remove('visible'));
 
 	document.getElementById(target).classList.add('visible');
@@ -113,7 +118,7 @@ navButtons.forEach(btn => {
 		document.querySelector(".photo-spiral").classList.add("show");
 	}
 
-})
+  })
 });
 
 //jokes for click button
@@ -197,3 +202,37 @@ document.getElementById("revealBtn").onclick = function() {
 
 };
 
+function resetMessagePage() { 
+	// Reset counters 
+	revealStep = 0; 
+	jokeClicks = 0; 
+
+	// Hide the message card + secret 
+	const messageCard = document.getElementById("messageCard"); 
+	const secret = document.getElementById("secret"); 
+	const jokeBox = document.getElementById("jokeMessage"); 
+
+	if (messageCard) messageCard.style.display = "none"; 
+	if (secret) secret.style.display = "none"; 
+	if (jokeBox) { 
+		jokeBox.style.display = "none"; 
+		jokeBox.textContent = ""; 
+		} 
+
+		// Reset the button text 
+		const btn = document.getElementById("revealBtn");
+		 if (btn) btn.textContent = "Click me"; 
+}
+
+homeButton.addEventListener("click", () => { 
+	resetMessagePage(); 
+	showHome(); }); 
+
+messageButton.addEventListener("click", () => { 
+	resetMessagePage(); // optional — only if you want it fresh even when re-entering 
+	showMessage(); }); 
+
+photosButton.addEventListener("click", () => { 
+	resetMessagePage();
+ 	showPhotos(); 
+});
