@@ -214,6 +214,58 @@ button:hover {
 	to { opacity: 1; transform: translateY(0); }
 }
 
+/*---------------------------------------------
+         MOBILE RESPONSIVE ADJUSTMENTS
+---------------------------------------------*/
+
+@media (max-width: 600px) { 
+
+/* Center the nav buttons */ 
+.nav { 
+	display: flex; 
+	justify-content: center; 
+	gap: 10px; 
+}
+ .nav button { 
+ 	font-size: 14px; 
+ 	padding: 8px 14px; 
+} 
+
+/* Home image scaling */ 
+
+#home img { 
+	width: 80%; 
+	max-width: 280px; 
+	height: auto; 
+	margin: 0 auto; 
+	display: block;
+}
+
+/* Message card resizing */ 
+#messageCard { 
+	width: 90%;
+	max-width: 320px;
+	margin: 0 auto; 
+}
+
+/* Secret message text */
+#secret { 
+	font-size: 16px;
+	padding: 10px; 
+}
+
+/* Photo spiral container */ 
+.photo-spiral { 
+	width: 100%; 
+	height: 350px; 
+	overflow: visible;
+} 
+
+.spiral .card-photo { 
+	width: 120px; 
+	height: 120px; 
+	} 
+}
 
 
 
